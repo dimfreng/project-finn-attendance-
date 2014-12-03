@@ -1,0 +1,136 @@
+.profile-container{
+	background-color: #081F35;
+	background-image: url("../images/starfield.png");
+	color: white;
+	padding-bottom: 59px;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+.profile-container .container .logo img{
+	display: block;
+	margin: 10px auto;
+	width: 44px;
+}
+.webnified-nav{
+	position: fixed;
+	background-color: #081F35;
+}
+.profile-container .company{
+	margin-left: 70px;
+	font-weight: bolder;
+	font-size: 25px;
+}
+.webnified-nav a:hover{
+	background-color: #3497DA;
+}
+
+
+.profile-container .propic img{
+	display: block;
+	width: 300px;
+	height: 300px;
+	margin: 90px auto;
+	margin-bottom: 45px;
+	border: 15px solid #fce4ec;
+	border-radius: 50%;	
+}
+.profile-container .name{
+	text-align: center;
+	margin: -35px auto;
+	margin-bottom: 45px;
+}
+
+
+.profile-container .fullname{
+	font-weight: bolder;
+	font-size: 50px;
+}
+
+.profile-container .description{
+	text-align: center;
+	margin: 50px 0 20px 0;
+	font-size: 30px;
+}
+
+.profile-container .button-holder .timein{
+	
+	color: white;
+	background-color: #0288d1;
+}
+.profile-container .button-holder .timeout{
+	
+	color: white;
+	background-color:#c0ca33;
+}
+.videoElement {
+    width: 300px;
+    height: 300px;
+    background-color: #666;
+    border: 10px #333 solid;
+}
+
+#snapshot{
+	width: 300px;
+	height: 220px;
+	margin-right: 280px;
+}
+
+#clockbox{
+	color: #fce4ec;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 45px;
+	margin: 10 auto;
+}
+
+.time-transaction{
+	padding: 10px;
+	width: 50%;
+	margin: -40px auto;
+}
+.day{
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.time{
+	color: black;
+	background-color: #fce4ec;
+	border-radius: 5px;
+	height: 60px;
+}
+.hour{
+	color: black;
+	background-color: #fce4ec;
+	border-radius: 5px;
+	height: 60px;
+	margin-left: 45px !important;
+}
+.modal{
+	margin: 20 auto;
+}
+.comment {
+	width: 100%;
+	margin: 35px 0 20px 0;
+	font-size: 15px;
+	padding: 5px;
+	border: 0px;
+}
+.todo{
+	font-size: 20px;
+	font-weight: bold;
+}
+.form{
+	color: black;
+	margin-left: 35px !important;
+}
+.takecam{
+	margin-bottom: 10px;
+}
+.cam-buttons{
+	color:white;
+	padding: 10px;
+	border-radius: 50px;
+	background-color:#233560;
+}

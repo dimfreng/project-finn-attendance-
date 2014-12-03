@@ -1,0 +1,71 @@
+.container {
+	color: white;
+	width: 80%;
+}
+
+.login-container{
+	background-color: #081F35;
+	background-image: url("../images/starfield.png");
+	color: white;
+	padding-bottom: 69px;
+	height: 650px;
+	margin-bottom: 0;
+	overflow: hidden;
+}
+
+.login-container input{
+	border-radius: 8px;
+	padding: 0 0 0 5px;
+	font-size: 20px;
+}
+.login-container .btn-large {
+	font-weight: bolder;
+	border-radius: 5px;
+	box-shadow: 2px 5px #333;
+}
+
+.login-container .container .logo img{
+	display: block;
+	margin: 60px auto;
+	width: 250px;
+}
+
+
+.login-container .container .info{
+	color: white;
+	font-size: 45px;
+	text-align: center;
+	font-weight: bolder;
+}
+
+.login-container .choices{
+	width: 50%;
+	margin: 60px auto;
+	text-align: center;
+}
+
+.login-container .form{
+	background-color: rgba(0,0,0,0.6);
+}
+.login-container .gender{
+	margin: 20px 0 5px 0;
+	font-size: 20px;
+}
+
+.collapsible{
+	border-radius: 5px;
+	border: none;
+}
+
+.collapsible-header{
+	font-weight: bolder;
+	border-radius: 5px;
+}
+
+.first{
+	background-color: #0288d1;
+}
+
+.second{
+	background-color:#c0ca33;
+}

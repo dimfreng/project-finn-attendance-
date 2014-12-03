@@ -1,0 +1,90 @@
+<html>
+<head>
+		<title>Profile</title>
+		<link rel="stylesheet" type="text/css" href="css/animation.css">
+		<link rel="stylesheet" type="text/css" href="css/materialize.css">
+		<link rel="stylesheet" type="text/css" href="css/profile.css">
+		
+		
+		
+</head>	
+<body>
+	<section class="profile-container">
+		<section>
+			<nav class="webnified-nav">
+				<section class="container">	
+				  <div class="nav-wrapper">
+				    <a href="#" class="brand-logo">
+				    	<section class="logo tossing">
+				    		<img src="images/logo.png">
+				    		
+				    	</section>
+				    </a>
+				    <label class="company">Webnified</label>
+				    <ul class="pull-right">
+				    	<li><a href="#">DTR</a></li>
+				    </ul>
+				    <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+				  </div>
+				</select>
+			</nav>
+		</section>
+
+		<section class="container">
+			<section class="propic bounce">
+				<img src="images/luffy.png"  class="z-depth-5">
+			</section>
+			<section class="name">
+				<label class="fullname pullUp">Monkey D. Luffy</label>
+			</section>
+			<section class="time-transaction">
+				<section id="date" class="row col s12 time-holder"></section>
+				<section id="clockbox"  class="row col s12 time-holder"></section>
+				<section class="row col s12 button-holder">
+					<a href="#take" class="mdi-action-alarm col s12 waves-effect waves-light btn-large timeout modal-trigger">Time-In</a>
+				</section>
+			</section>
+			<section class="description">
+				<p class="pulse">"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time."</p>
+			</section>
+			
+			<section id="take" class="modal">
+				<a href="#" class="modal_close">X</a>
+				<h1>Picture2x!</h1>
+				<section class="takecam">
+					<a href="#" id="start" class="cam-buttons">Start</a>
+				    <a href="#taken" id="capture" class="timeout modal_close modal-trigger cam-buttons">Capture</a>	
+			    </section>
+			    <video id="preview" class="videoElement" autoplay></video>
+			</section>
+
+			<section id="taken" class="modal">
+				<section class="takecam">
+					<a href="#take" class="timeout modal_close modal-trigger cam-buttons" >Take Again</a>
+			    </section>
+				<section class="row col s12">
+					<section class="col s5 img">
+			    		<canvas id="snapshot" class="videoElement"></canvas>
+			    	</section>
+			    	<section class="col s6 form">
+				    	<form class="">
+				    		<label class="todo">What do you want to do today dude?</label>
+				    		<textarea class="comment"></textarea>
+				    		<button class="btn-large" type="submit">
+			            		<i class="mdi-action-alarm-on tossing"></i> Done
+			            	</button>
+				    	</form>
+			    	</section>
+			    </section>
+			</section>
+		
+		
+	</section>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/materialize.js"></script>
+		<script type="text/javascript" src="js/initialization.js"></script>
+		<script type="text/javascript" src="js/confirmation.js"></script>
+		<script type="text/javascript" src="js/clock.js"></script>
+		<script type="text/javascript" src="js/camera.js"></script>
+</body>
+</html>
