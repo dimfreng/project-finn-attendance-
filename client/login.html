@@ -1,20 +1,19 @@
-<html>
+<html ng-app="finn">
 <head>
 	<title>I Attend!</title>
 	<link rel="stylesheet" type="text/css" href="css/animation.css">
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/materialize.js"></script>
-	<script type="text/javascript" src="js/initialization.js"></script>
-	<script type="text/javascript" src="js/confirmation.js"></script>
+	
 </head>
-<body>
+<body check>
 	<section class="login-container">
 
 		<section class="container">
 			<section class="logo">
-				<img src="images/logo.png" class="bounce">
+				<section class="floating">
+					<img src="images/logo.png" >
+				</section>
 				
 				<h1 class="flow-text info">Hello! May I get the following Info?</h1>
 			</section>
@@ -28,12 +27,12 @@
 		          	<section class="collapsible-header second">
 		          		<i class="mdi-action-account-circle pulse"></i><label>SignIn</label>
 		          	</section>
-		            <section class="collapsible-body" style="display: none;">
+		            <section class="collapsible">
 			          	  <section class="row form slideExpandUp">
-					        <form action="#" method="post" class="col s12">
+					        <form login ng-submit="passIt()" method="post" class="col s12">
 					          <section class="row">
-					            <section class="col s6"><input type="text" placeholder="User Name" name="username" required></section>
-					            <section class="col s6"><input type="password" placeholder="Password" name="password" required></section>
+					            <section class="col s6"><input ng-model="user.name" type="text" placeholder="User Name" required></section>
+					            <section class="col s6"><input ng-model="user.password" type="password" placeholder="Password" required></section>
 					          </section>
 					          <section class="row col s12">        
 				            	<button class="btn-large" type="submit">
@@ -118,5 +117,12 @@
 
 		</section>
 	</section>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-script.js"></script>
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<script type="text/javascript" src="js/initialization.js"></script>
+	<script type="text/javascript" src="js/confirmation.js"></script>
 </body>
 </html>

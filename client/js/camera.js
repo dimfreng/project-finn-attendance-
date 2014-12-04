@@ -27,9 +27,19 @@ capture.addEventListener('click', function () {
     img.height = canvas.height = video.videoHeight;
  
     ctx.drawImage(video,0,0);
-    console.log(canvas.toDataURL('image/png'));
+    localStorage.setItem('image',canvas.toDataURL('image/webp'));
     img.src = canvas.toDataURL('image/webp');
-localStorage.setItem('canvas', canvas.toDataURL('image/png'));
+
+
+}, false);
+var offcam = document.querySelector('#offcam');
+offcam.addEventListener('click', function () {
+    if (!localStream) {
+        return;
+    }
+    localStream.stop();
+    localStream = null;
+    
 
 }, false);
  

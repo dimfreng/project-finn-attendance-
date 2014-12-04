@@ -1,3 +1,8 @@
+.container {
+	color: white;
+	width: 85%;
+}
+
 .profile-container{
 	background-color: #081F35;
 	background-image: url("../images/starfield.png");
@@ -62,20 +67,20 @@
 	color: white;
 	background-color:#c0ca33;
 }
-.videoElement {
+.profile-container .videoElement {
     width: 300px;
     height: 300px;
     background-color: #666;
     border: 10px #333 solid;
 }
 
-#snapshot{
+.profile-container #snapshot{
 	width: 300px;
 	height: 220px;
 	margin-right: 280px;
 }
 
-#clockbox{
+.profile-container #clockbox{
 	color: #fce4ec;
 	font-weight: bolder;
 	text-align: center;
@@ -83,52 +88,52 @@
 	margin: 10 auto;
 }
 
-.time-transaction{
+.profile-container .time-transaction{
 	padding: 10px;
 	width: 50%;
 	margin: -40px auto;
 }
-.day{
+.profile-container .day{
 	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
 }
 
-.time{
+.profile-container .time{
 	color: black;
 	background-color: #fce4ec;
 	border-radius: 5px;
 	height: 60px;
 }
-.hour{
+.profile-container .hour{
 	color: black;
 	background-color: #fce4ec;
 	border-radius: 5px;
 	height: 60px;
 	margin-left: 45px !important;
 }
-.modal{
+.profile-container .modal{
 	margin: 20 auto;
 }
-.comment {
+.profile-container .comment {
 	width: 100%;
 	margin: 35px 0 20px 0;
 	font-size: 15px;
 	padding: 5px;
 	border: 0px;
 }
-.todo{
+.profile-container .todo{
 	font-size: 20px;
 	font-weight: bold;
 }
-.form{
+.profile-container .form{
 	color: black;
 	margin-left: 35px !important;
 }
-.takecam{
+.profile-container .takecam{
 	margin-bottom: 10px;
 }
-.cam-buttons{
+.profile-container .cam-buttons{
 	color:white;
 	padding: 10px;
 	border-radius: 50px;
