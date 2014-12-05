@@ -75,10 +75,19 @@
 }
 
 .profile-container #snapshot{
+	display: none;
 	width: 300px;
 	height: 220px;
 	margin-right: 280px;
 }
+
+.profile-container #emotion{
+	display: none;
+	color: black;
+	margin-top: -45px !important;
+	padding: 2px;
+}
+
 
 .profile-container #clockbox{
 	color: #fce4ec;
@@ -130,7 +139,14 @@
 	color: black;
 	margin-left: 35px !important;
 }
-.profile-container .takecam{
+.profile-container #again{
+	display: none;
+	margin-bottom: 10px;
+}
+.profile-container .emoPic{
+	width: 80px;
+	height: 80px;
+	border-radius: 50px;
 	margin-bottom: 10px;
 }
 .profile-container .cam-buttons{
@@ -138,4 +154,54 @@
 	padding: 10px;
 	border-radius: 50px;
 	background-color:#233560;
+}
+.profile-container .emolements{
+	text-align: center;
+	margin: 100px 0px !important;
+}
+.heart{
+	margin-top: 42px;
+	font-size: 21px;
+	font-weight: bolder;
+	margin-bottom: -58px;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	border: 1px solid black;
+	width: 80px;
+	height: 80px;
+	border-radius: 50px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }

@@ -15,13 +15,19 @@ start.addEventListener('click', function () {
     startCaptureImage();
     return false;
 }, false);
+
+var start = document.querySelector('#startAgain');
+start.addEventListener('click', function () {
+    startCaptureImage();
+    return false;
+}, false);
  
 var capture = document.querySelector('#capture');
 capture.addEventListener('click', function () {
     if (!localStream) {
         return;
     }
- 
+    
     var img = document.querySelector('#snapshot');
     img.width = canvas.width = video.videoWidth;
     img.height = canvas.height = video.videoHeight;
@@ -29,19 +35,13 @@ capture.addEventListener('click', function () {
     ctx.drawImage(video,0,0);
     localStorage.setItem('image',canvas.toDataURL('image/webp'));
     img.src = canvas.toDataURL('image/webp');
-
-
-}, false);
-var offcam = document.querySelector('#offcam');
-offcam.addEventListener('click', function () {
-    if (!localStream) {
-        return;
-    }
     localStream.stop();
     localStream = null;
     
 
+
 }, false);
+
  
 function errorCallback(err) {
     console.error('Failed', err);

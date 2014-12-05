@@ -81,9 +81,18 @@ angular
 				if($scope.user.employee.status == "out"){
 					$scope.user.button = "Time-In";
 					$scope.user.note = "What do you want to do today dude?";
+					$scope.user.klase = "#take";
+					$scope.user.did = "start"
+					document.getElementById('snapshot').style.display = "block";
+					document.getElementById('again').style.display = "block";
+
 				}else{
 					$scope.user.button = "Time-Out";
 					$scope.user.note = "How's your day in Webnified? :D";
+					$scope.user.klase = "#taken";
+					$scope.user.did = "none"
+					document.getElementById('emotion').style.display = "block";
+
 				}
 
 				$scope.getTimeInfo = function(){
@@ -96,11 +105,12 @@ angular
 						{
 							"id":$scope.user.employee.id.toString(),
 							"status":"in",
+							"comment":$scope.user.comment,
 							"photo_path":"hello"	
 						})
 						.success(function(response){
 							localStorage.clear();
-							alert("you have successfully login");
+							alert("you have successfully TIME-IN");
 							localStorage.setItem('account' , JSON.stringify(response));
 							window.location = "/profile.html";
 						})
@@ -113,16 +123,18 @@ angular
 						if(localStream){
 							localStream.stop();
 						}
+						
 						$http.post("http://192.168.1.40:3000/attendace/goOut" , 
 						{
 							"employee_id":$scope.user.employee.id,
 							"time_id":$scope.user.clock.id,
+							"comment":$scope.user.comment,
 							"status":"out",
-							"photo_path":"hello"	
+							"feeling":$scope.user.feeling	
 						})
 						.success(function(response){
 							localStorage.clear();
-							alert("you have successfully logout");
+							alert("you have successfully TIME_OUT/logout");
 							window.location ="/login.html";
 						})
 						.error(function(response){
