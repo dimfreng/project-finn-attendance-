@@ -48,10 +48,10 @@ angular
 		"$http",
 		function controller($scope,$http){
 			$scope.passIt = function(){
-				$http.post("http://192.168.1.36:3000/hero/login_attempt" , 
+				$http.post("http://192.168.1.40:3000/attendace/login" , 
 					{
-						"username_or_email":$scope.user.name,
-						"login_password":$scope.user.password	
+						"email":$scope.user.name,
+						"password":$scope.user.password	
 					})
 				.success(function(response){
 
@@ -77,10 +77,8 @@ angular
 			"$scope",
 			"$http",
 			function controller ($scope,$http) {
-				$scope.user = JSON.parse(localStorage.getItem('account')) || {};
-			
-				console.log($scope.user.id);
-				if($scope.user.status){
+				$scope.user = JSON.parse(localStorage.getItem('account')) || {employee: {} , time: {}};
+				if($scope.user.employee.status == "out"){
 					$scope.user.button = "Time-In";
 					$scope.user.note = "What do you want to do today dude?";
 				}else{
@@ -89,20 +87,20 @@ angular
 				}
 
 				$scope.getTimeInfo = function(){
-					if($scope.user.status){
+					if($scope.user.employee.status == "out"){
 
 						if(localStream){
 							localStream.stop();
 						}
-						alert("you have successfully login");
-						$http.post("http://192.168.1.36:3000/hero/time" , 
+						$http.post("http://192.168.1.40:3000/attendace/goIn" , 
 						{
-							"hero_id":$scope.user.id.toString(),
-							"status":"false",
+							"id":$scope.user.employee.id.toString(),
+							"status":"in",
 							"photo_path":"hello"	
 						})
 						.success(function(response){
 							localStorage.clear();
+							alert("you have successfully login");
 							localStorage.setItem('account' , JSON.stringify(response));
 							window.location = "/profile.html";
 						})
@@ -115,15 +113,16 @@ angular
 						if(localStream){
 							localStream.stop();
 						}
-						alert("you have successfully logout");
-						$http.post("http://192.168.1.36:3000/hero/time" , 
+						$http.post("http://192.168.1.40:3000/attendace/goOut" , 
 						{
-							"hero_id":$scope.user.id,
-							"status":"true",
+							"employee_id":$scope.user.employee.id,
+							"time_id":$scope.user.clock.id,
+							"status":"out",
 							"photo_path":"hello"	
 						})
 						.success(function(response){
 							localStorage.clear();
+							alert("you have successfully logout");
 							window.location ="/login.html";
 						})
 						.error(function(response){
