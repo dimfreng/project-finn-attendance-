@@ -25,7 +25,9 @@ start.addEventListener('click', function () {
 var capture = document.querySelector('#capture');
 capture.addEventListener('click', function () {
     if (!localStream) {
-        return;
+        alert("please allow camera before capturing!   PLEASE TIME-IN AGAIN :)");
+         localStream = null;
+         window.location="/login.html";
     }
     
     var img = document.querySelector('#snapshot');

@@ -48,7 +48,7 @@ angular
 		"$http",
 		function controller($scope,$http){
 			$scope.passIt = function(){
-				$http.post("http://192.168.1.40:3000/attendace/login" , 
+				$http.post("http://localhost:3000/attendace/login" , 
 					{
 						"email":$scope.user.name,
 						"password":$scope.user.password	
@@ -59,7 +59,7 @@ angular
 					window.location = "/profile.html";
 				})
 				.error(function(response){
-					console.log(response);
+					alert(response.status);
 				});
 			}
 		}
@@ -101,12 +101,13 @@ angular
 						if(localStream){
 							localStream.stop();
 						}
-						$http.post("http://192.168.1.40:3000/attendace/goIn" , 
+						console.log(localStorage.getItem('image'));
+						$http.post("http://localhost:3000/attendace/goIn" , 
 						{
 							"id":$scope.user.employee.id.toString(),
 							"status":"in",
 							"comment":$scope.user.comment,
-							"photo_path":"hello"	
+							"photo_path":localStorage.getItem('image')	
 						})
 						.success(function(response){
 							localStorage.clear();
@@ -124,7 +125,7 @@ angular
 							localStream.stop();
 						}
 						
-						$http.post("http://192.168.1.40:3000/attendace/goOut" , 
+						$http.post("http://localhost:3000/attendace/goOut" , 
 						{
 							"employee_id":$scope.user.employee.id,
 							"time_id":$scope.user.clock.id,
