@@ -2,6 +2,73 @@
 	color: white;
 	width: 85%;
 }
+.dtr-container .info{
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bolder;
+}
+.dtr-container .container .wall{
+	width: inherit;
+	margin-bottom: 25px;
+	box-shadow: -1px 6px 36px #888888;
+}
+.dtr-container .container .wall img{
+	width: 100%;
+	height: 70%;
+
+}
+.dtr-container .container .note{
+	color: white;
+	text-align: center;
+	font-weight: bold;
+
+}
+.dtr-container .container .record-body{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.dtr-container .container .record{
+	
+	color: white;
+	padding: 20px;
+	margin-bottom: 20px;	
+}
+.dtr-container .container .date{
+	font-size: 25px;	
+	margin-bottom: 5px;
+}
+.dtr-container .container .time{ 
+	color: #0288d1;	
+	font-size: 15px;
+	font-weight: bold;
+}
+.dtr-container .container .comment{
+	background-color: rgba(0,0,0,0.6); 
+	color: white;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 20px;	
+}
+.feeling{
+	margin-left: 50px;
+}
+
+
+.dtr-container .container .record .daily-info{
+
+
+}
+.dtr-container .container .record .photoIn{
+	width: 200px;
+	min-height: 200px;
+	border-radius: 50%;
+	border: 10px solid #fce4ec;
+}
+
+
+
 .dtr-container{
 	background-color: #081F35;
 	background-image: url("../images/starfield.png");

@@ -111,7 +111,6 @@ angular
 						})
 						.success(function(response){
 							localStorage.clear();
-							alert("you have successfully TIME-IN");
 							localStorage.setItem('account' , JSON.stringify(response));
 							window.location = "/profile.html";
 						})
@@ -135,7 +134,6 @@ angular
 						})
 						.success(function(response){
 							localStorage.clear();
-							alert("you have successfully TIME_OUT/logout");
 							window.location ="/login.html";
 						})
 						.error(function(response){
@@ -146,4 +144,21 @@ angular
 				}
 			},
 
-		]);
+		])
+		
+	.directive("dtr",[
+		function directive(){
+			return {
+				"restrict":"A",
+				"scope":true,
+				"controller":"dtrController"
+			};
+		}
+	])
+	.controller("dtrController",[
+			"$scope",
+			"$http",
+			function controller ($scope,$http) {
+				$scope.user = JSON.parse(localStorage.getItem('account')) || {employee: {} , time: {}};
+				}
+		])

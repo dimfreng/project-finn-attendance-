@@ -14,15 +14,15 @@
 			<nav class="webnified-nav">
 				<section class="container">	
 				  <div class="nav-wrapper">
-				    <a href="#" class="brand-logo">
+				    <a href="http://www.webnified.com" class="brand-logo">
 				    	<section class="logo tossing">
-				    		<img src="images/logo.png">
-				    		
+				    		<img src="images/logo.png">	
 				    	</section>
 				    </a>
 				    <label class="company">Webnified</label>
 				    <ul class="pull-right">
-				    	<li><a href="#">DTR</a></li>
+				    	<li><a href="dtr.html">DTR</a></li>
+				    	<li><a href="https://trello.com" target="_blank">Task in Trello</a></li>
 				    </ul>
 				    <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
 				  </div>
@@ -36,6 +36,9 @@
 			</section>
 			<section class="name">
 				<label class="fullname pullUp">{{user.employee.firstname}} {{user.employee.lastname}}</label>
+			</section>
+			<section class="position">
+				<label>{{user.employee.position}}</label>
 			</section>
 			<section class="time-transaction">
 				<section id="date" class="row col s12 time-holder"></section>

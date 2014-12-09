@@ -1,4 +1,4 @@
-<html>
+<html ng-app="finn">
 <head>
 		<title>Daily Time Record</title>
 		<link rel="stylesheet" type="text/css" href="css/animation.css">
@@ -6,8 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="css/dtr.css">
 	
 </head>	
-<body>
-	<section class="dtr-container">
+<body checkIt >
+	<section dtr class="dtr-container">
 		<section>
 			<nav class="webnified-nav">
 				<section class="container">	
@@ -20,36 +20,54 @@
 				    </a>
 				    <label class="company">Webnified</label>
 				    <ul class="pull-right">
-				    	<li><a href="#">DTR</a></li>
+				    	<li><a href="profile.html">Profile</a></li>
 				    </ul>
 				    <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
 				  </div>
 				</section>
 			</nav>
-		</section>
-		<section class="card-image">
-		            <img src="images/nature.jpg">
-		            <span class="card-title">Card Title</span>
-		          </section>  
+		</section>	 
 		<section class ="container">
-			<section class="row col s12 bounce header">
-				<section class="col s12">
-		        <section class="card small">
-		          
-		          <section class="card-content">
-		            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-		          </section>
-		          <section class="card-action">
-		            <a href="#">This is a link</a>
-		            <a href="#">This is a link</a>
-		          </section>
-		        </section>
-		      </section>
-		  </section>
+			<section class="webni-logo">
+				<section class="wall">
+					<img src="images/wall.jpg">
+				</section>
+				<h4 class="note">Your daily Record as a geek , {{user.employee.firstname}}</h4>
+				<section class="record-body">
+					<section class="record row col s12" ng-repeat ="timeStamp in user.record">
+						<section class="col s4">
+							<img class="photoIn" src={{timeStamp.photoIn}}>
+						</section>
+						<section class="daily-info col s8">
+							<section class="date">
+								{{timeStamp.date}}
+							</section>
+							<section class="time">
+								TIME-IN: {{timeStamp.timeIn}}
+							</section>
+							<section class="comment">
+								{{timeStamp.commentIn}}
+							</section>
+							<section class="time">
+								TIME-OUT: {{timeStamp.timeOut}}
+								<label class="feeling">Feeling: {{timeStamp.emotion}}</label>
+							</section>
+							<section class="comment">
+								{{timeStamp.commentOut}}
+							</section>
+
+						</section>	
+					</section>
+				</section>
+			
+				<h1 class="flow-text info">" Life is not measured by the number of breaths we take, but by the moments that take our breath away. "</h1>
+			</section>
 		</section>
 	</section>
 	
 		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular-script.js"></script>
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 		<script type="text/javascript" src="js/initialization.js"></script>
 		<script type="text/javascript" src="js/confirmation.js"></script>
