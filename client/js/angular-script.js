@@ -80,14 +80,14 @@ angular
 				$scope.user = JSON.parse(localStorage.getItem('account')) || {employee: {} , time: {}};
 				if($scope.user.employee.status == "out"){
 					$scope.user.button = "Time-In";
-					$scope.user.note = "What do you want to do today dude?";
+					$scope.user.note = "What do you want to do today Genius?";
 					$scope.user.klase = "#take";
 					$scope.user.did = "start"
 					document.getElementById('snapshot').style.display = "block";
 					document.getElementById('again').style.display = "block";
 
 				}else{
-					$scope.user.button = "Time-Out";
+					$scope.user.button = "Time-Out/LogOut";
 					$scope.user.note = "How's your day in Webnified? :D";
 					$scope.user.klase = "#taken";
 					$scope.user.did = "none"
